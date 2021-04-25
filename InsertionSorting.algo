@@ -7,7 +7,7 @@ BEGIN
 
     FOR i FROM 1 TO arr.length-1 STEP 1  DO // First iteration // arr:={11,13,5,6} 
 
-        elt := arr[i];   //Pick element arr[i]  //elt:= 11  5
+        elt := arr[i];   //Pick element arr[i]  //elt:= 11 
         j := i-1;        //Each time work only with the first i-1 element from of the array // j:=0 arr:={12}
 
         WHILE (j>=0 && arr[j]>elt) DO //arr[j]:=12 > elt:=11

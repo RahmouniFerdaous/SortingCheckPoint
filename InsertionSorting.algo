@@ -1,0 +1,25 @@
+ALGORITHM InsertionSorting   
+VAR
+    arr : ARRAY_OF INTEGER[20];
+    arr:={12, 11, 13, 5, 6};
+    i,j,elt:INTEGER;
+BEGIN
+
+    FOR i FROM 1 TO arr.length-1 STEP 1  DO // First iteration // arr:={11,13,5,6} 
+
+        elt := arr[i];   //Pick element arr[i]  //elt:= 11  5
+        j := i-1;        //Each time work only with the first i-1 element from of the array // j:=0 arr:={12}
+
+        WHILE (j>=0 && arr[j]>elt) DO //arr[j]:=12 > elt:=11
+            arr[j+1] := arr[j]; //arr[1] ;= arr[0] // arr:={12,12,13,5,6}
+            j:= j-1;   //insert it into sorted sequence in the array from 0 to i-1. // j:=-1
+        END_WHILE
+
+        arr[j+1] := elt;   //arr[0] := 11   
+
+    END_FOR    //End of first iteration // arr:={11,12,13,5,6} 
+
+    Write(arr);    // arr:={5 6 11 12 13}
+
+END
+
